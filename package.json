@@ -1,0 +1,35 @@
+{
+    "name": "npm-clean-publish",
+    "version": "0.0.1",
+    "description": "When you run `npm publish`, it includes all files under the directory even if they are not checked in to the repository. `npm-clean-publish` will help you to prevent that situation.",
+    "main": "clean-publish.js",
+    "scripts": {
+        "test": "mocha test",
+        "prepublish": "./clean-publish.js",
+        "prpublish": "echo `pwd` && exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/beatak/npm-clean-publish.git"
+    },
+    "keywords": [
+        "npm",
+        "prepublish"
+    ],
+    "author": "Takashi Mizohata <beatak@gmail.com> (http://github.com/beatak)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/beatak/npm-clean-publish/issues"
+    },
+    "homepage": "https://github.com/beatak/npm-clean-publish",
+    "dependencies": {
+        "shelljs": "^0.4.0",
+        "ignore": "^2.2.15"
+    },
+    "devDependencies": {
+        "mocha": "^2.0.1"
+    },
+    "engines" : {
+        "node" : ">=0.12.0"
+    }
+}
